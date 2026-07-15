@@ -1,6 +1,4 @@
-
-# Create the CSS file
-css_content = '''/* ===== RESET & BASE ===== */
+/* ===== RESET & BASE ===== */
 * {
     margin: 0;
     padding: 0;
@@ -1106,41 +1104,41 @@ body {
     .contact-container {
         grid-template-columns: 1fr;
     }
-    
+
     .services-grid,
     .specialists-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .stats-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .footer-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .hero-content h1 {
         font-size: 40px;
     }
-    
+
     .hero-image {
         order: -1;
     }
-    
+
     .hero-image img {
         height: 400px;
         max-width: 100%;
     }
-    
+
     .why-image {
         order: -1;
     }
-    
+
     .contact-info-section {
         position: static;
     }
@@ -1160,49 +1158,49 @@ body {
         transition: var(--transition);
         z-index: 999;
     }
-    
+
     .nav-links.active {
         right: 0;
     }
-    
+
     .mobile-toggle {
         display: block;
         z-index: 1001;
     }
-    
+
     .nav-btn {
         display: none;
     }
-    
+
     .services-grid,
     .specialists-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .stats-container {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .form-row {
         grid-template-columns: 1fr;
     }
-    
+
     .hero-content h1 {
         font-size: 32px;
     }
-    
+
     .section-header h2 {
         font-size: 28px;
     }
-    
+
     .cta-container h2 {
         font-size: 28px;
     }
-    
+
     .top-bar-right {
         display: none;
     }
@@ -1212,23 +1210,17 @@ body {
     .hero-content h1 {
         font-size: 26px;
     }
-    
+
     .stats-container {
         grid-template-columns: 1fr;
     }
-    
+
     .about-img-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .about-img {
         height: 150px;
         border-radius: var(--radius) !important;
     }
 }
-'''
-
-with open('/mnt/agents/output/style.css', 'w', encoding='utf-8') as f:
-    f.write(css_content)
-
-print("style.css created successfully!")
