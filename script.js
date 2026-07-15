@@ -1,6 +1,4 @@
-
-# Create the JS file
-js_content = '''// ===== NAVBAR SCROLL EFFECT =====
+// ===== NAVBAR SCROLL EFFECT =====
 const navbar = document.getElementById('navbar');
 const backToTop = document.getElementById('backToTop');
 
@@ -71,7 +69,7 @@ let testimonialInterval;
 function showTestimonial(index) {
     testimonialCards.forEach(card => card.classList.remove('active'));
     dots.forEach(dot => dot.classList.remove('active'));
-    
+
     testimonialCards[index].classList.add('active');
     dots[index].classList.add('active');
     currentTestimonial = index;
@@ -99,17 +97,17 @@ const appointmentForm = document.getElementById('appointmentForm');
 
 appointmentForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     // Get form data
     const formData = new FormData(appointmentForm);
-    
+
     // Show success message
     const btn = appointmentForm.querySelector('button[type="submit"]');
     const originalText = btn.innerHTML;
-    
+
     btn.innerHTML = '<i class="fas fa-check-circle"></i> Appointment Booked!';
     btn.style.background = '#10b981';
-    
+
     setTimeout(() => {
         btn.innerHTML = originalText;
         btn.style.background = '';
@@ -169,7 +167,7 @@ let countersAnimated = false;
 
 function animateCounters() {
     statItems.forEach(stat => {
-        const target = parseInt(stat.textContent.replace(/\\D/g, ''));
+        const target = parseInt(stat.textContent.replace(/\D/g, ''));
         const suffix = stat.textContent.replace(/[0-9]/g, '');
         let current = 0;
         const increment = target / 60;
@@ -210,9 +208,3 @@ window.addEventListener('scroll', () => {
 });
 
 console.log('MediCare by Dr. Haroon Chaudhry - Website Loaded Successfully!');
-'''
-
-with open('/mnt/agents/output/script.js', 'w', encoding='utf-8') as f:
-    f.write(js_content)
-
-print("script.js created successfully!")
